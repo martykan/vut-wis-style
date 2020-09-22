@@ -1,0 +1,221 @@
+/* ==UserStyle==
+@name         vut-wis-style
+@namespace    github.com/martykan/vut-wis-style
+@version      1.0.0
+@license      unlicense
+@preprocessor default
+==/UserStyle== */
+@-moz-document url-prefix("https://wis.fit.vutbr.cz")
+{
+  body {
+    max-width: 1100px;
+    margin: 70px auto 0 auto;
+  }
+
+  body,
+  td,
+  th,
+  iframe,
+  .text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  /* Menu */
+  table[role="navigation"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05);
+    background-color: white !important;
+    text-transform: uppercase;
+  }
+
+  table[role="navigation"] img {
+    margin-right: 20px;
+  }
+
+  table[role="navigation"] a,
+  table[role="navigation"]:hover a.stabs {
+    color: #333;
+    border-bottom: 2px solid white;
+    transition: color 50ms ease-in-out, border-bottom 50ms ease-in-out;
+  }
+
+  table[role="navigation"] a:hover,
+  table[role="navigation"] a.stabs,
+  table[role="navigation"] a.stabs:hover {
+    background-color: white;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    transition: color 50ms ease-in-out, border-bottom 50ms ease-in-out;
+  }
+
+  table[role="navigation"] tbody {
+    max-width: 1100px;
+    margin: auto;
+    display: block;
+  }
+
+  table[role="navigation"] td {
+    padding: 0 !important;
+  }
+
+  /* Footer */
+  body > .noprint > address {
+    padding: 1rem 0;
+    color: #555;
+  }
+
+  .content {
+    border-color: #f1f1f1;
+  }
+
+  /* Link buttons */
+  .sbb {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .sbb li {
+    display: block;
+    width: 32%;
+  }
+
+  .sbb li > a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sbb li > div > a {
+    float: right;
+    font-size: 0.8rem;
+  }
+
+  .sbb li > div > a:first-of-type {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .sbb li > div > a:last-of-type {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .sbb li > div {
+    margin-top: 3px;
+    color: #555;
+  }
+
+  /* Inputs and buttons */
+  input[type="text"],
+  select {
+    border-radius: 5px;
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 16px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  a.btn,
+  input[type="submit"],
+  button {
+    border-radius: 5px;
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  a.btn:hover,
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Tables */
+  .table-holder > table,
+  table.stbl,
+  form[action*="studyps-l.php."] > table:first-of-type {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: rgb(190, 190, 190) !important;
+  }
+
+  .table-holder > table tr {
+    border: 1px solid rgb(190, 190, 190);
+  }
+
+  form[action*="studyps-l.php."] > table:first-of-type {
+    border-width: 0 !important;
+    border-color: rgb(190, 190, 190) !important;
+  }
+
+  .content th,
+  .content td,
+  .content td.dataquery,
+  .content td.dataview0,
+  .content td.dataview1,
+  table.stbl > tbody > tr > td,
+  table.stbl > tbody > tr > th {
+    padding: 8px !important;
+  }
+
+  form[action*="phorum-"] table.stbl td.bow:first-of-type {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  form[action*="phorum-"] table.stbl td.bow:first-of-type table,
+  form[action*="phorum-"] table.stbl td.bow:first-of-type table tr {
+    border: 0 !important;
+  }
+  td > input[type="submit"],
+  td > button,
+  td > a.btn {
+    margin: 0 !important;
+  }
+  form[action*="phorum-"] table.stbl td.bow {
+    border: inherit;
+  }
+
+  tr[bgcolor="#ADD8E6"],
+  tr[bgcolor="#ADD8E6"] > td,
+  tr[bgcolor="#ADD8E6"] > th,
+  td[bgcolor="#ADD8E6"],
+  th[bgcolor="#ADD8E6"] {
+    background-color: rgb(240, 240, 240);
+  }
+}
+
+@-moz-document url-prefix("https://wis.fit.vutbr.cz/FIT/st/phorum-msg-show.php")
+{
+  .editbox table {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  #iframe_taedit0 {
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+    outline: 0 !important;
+  }
+
+  .editbox td {
+    padding: 0 !important;
+  }
+
+  .content table:nth-of-type(2) {
+    border-color: rgb(190, 190, 190) !important;
+  }
+  .content table:nth-of-type(3) {
+    border-color: rgb(190, 190, 190) !important;
+    border-top: 0;
+  }
+}
